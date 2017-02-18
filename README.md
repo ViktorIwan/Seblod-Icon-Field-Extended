@@ -1,11 +1,18 @@
-# Seblod-Icon-Field-Extended
-Icon Field Modification to support FontAwesome and Text Placement Before/After Icon
+Seblod's Icon Field Extended
+===================
 
-This override is usefull when you want to build a front-end apps. The new modification will support:
-1. If you're using fontawesome icons
-2. If you like to have the icon displayed in :
-   - Icon Only
-   - Icon Before Text
-   - Icon After Text
-   
-3. New Text Parameter also provided
+
+This override is helpful if you want to use Icon Field in Front End and need to have this following criteria:
+
+ 1. You're using Font Awesome icon instead of default bootstrap icon
+ 2. You want to have Text  on before or after icon
+
+
+----------
+
+
+How to Use
+-------------
+
+1. You need to override the icon field language 
+2. You need to override all files in icon plugin 
