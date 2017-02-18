@@ -53,16 +53,40 @@ class plgCCK_FieldIcon extends JCckPluginField
 	// onCCK_FieldPrepareContent
 	public function onCCK_FieldPrepareContent( &$field, $value = '', &$config = array() )
 	{
+		$iconText="";
 		if ( self::$type != $field->type ) {
 			return;
 		}
 		parent::g_onCCK_FieldPrepareContent( $field, $config );
-		
+		// Init
+		$options2	=	JCckDev::fromJSON( $field->options2 );
+		$iconDisplay=$field->bool3;
+		$iconType=$field->bool2;
+		$iconText=$options2['iconText'];
 		// Init
 		$html			=	'';
 		$value			=	$field->location;
-		$html			=	'<span class="icon-'.$value.'"></span>';
-		
+		switch ($iconType) {
+			case '1':
+				$html			=	'<i class="fa fa-'.$value.'"></i> ';
+				break;
+			case '0':
+			default:
+				$html			=	'<span class="icon-'.$value.'"></span>';
+				break;
+		}
+		//ICON Type
+		switch ($iconDisplay) {
+			case '1':
+				$html			=JText::_($iconText).$html;
+				break;
+			case '2':
+				$html			.=JText::_($iconText);
+				break;
+			default:
+				
+				break;
+		}
 		// Set
 		$field->text		=	$html;
 		$field->typo_target	=	'text';
