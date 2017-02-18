@@ -62,7 +62,7 @@ class plgCCK_FieldIcon extends JCckPluginField
 		$options2	=	JCckDev::fromJSON( $field->options2 );
 		$iconDisplay=$field->bool3;
 		$iconType=$field->bool2;
-		$iconText=$options2['iconText'];
+		$iconText=@$options2['iconText'];
 		// Init
 		$html			=	'';
 		$value			=	$field->location;
@@ -78,11 +78,14 @@ class plgCCK_FieldIcon extends JCckPluginField
 		//ICON Type
 		switch ($iconDisplay) {
 			case '1':
-				$html			=JText::_($iconText).$html;
-				break;
-			case '2':
 				$html			.=JText::_($iconText);
 				break;
+			case '2':
+				$html			=JText::_($iconText).$html;
+				break;
+			
+
+			case '0':
 			default:
 				
 				break;
