@@ -15,4 +15,5 @@ How to Use
 -------------
 
 1. You need to override the icon field language 
-2. You need to override all files in icon plugin 
+2. You need to override all files in icon plugin
+3. You need to use custom class for icon 

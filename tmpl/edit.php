@@ -29,6 +29,7 @@ $options2	=	JCckDev::fromJSON( $this->item->options2 );
 		echo JCckDev::renderForm( 'core_bool2', $this->item->bool2, $config, array( 'label'=>'Format', 'options'=>'Default Joomla=0||Font Awesome=1' ) );
 		echo JCckDev::renderForm( 'core_bool3', $this->item->bool3, $config, array( 'label'=>'Icon Placement', 'options'=>'Icon Only=0||Icon Before Text=1||Icon After Text=2' ) );
 		echo JCckDev::renderForm( 'core_defaultvalue', @$options2['iconText'], $config, array( 'label'=>'Default Text', 'storage_field'=>'json[options2][iconText]'  ) );
+		echo JCckDev::renderForm( 'core_defaultvalue', @$options2['customIcon'], $config, array( 'label'=>'Custom Class Icon', 'storage_field'=>'json[options2][customIcon]'  ) );
         echo JCckDev::renderBlank();
 
         echo JCckDev::renderSpacer( JText::_( 'COM_CCK_STORAGE' ), JText::_( 'COM_CCK_STORAGE_DESC' ) );

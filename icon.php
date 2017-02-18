@@ -63,16 +63,28 @@ class plgCCK_FieldIcon extends JCckPluginField
 		$iconDisplay=$field->bool3;
 		$iconType=$field->bool2;
 		$iconText=@$options2['iconText'];
+		$customIcon=@$options2['customIcon'];
 		// Init
 		$html			=	'';
+
 		$value			=	$field->location;
 		switch ($iconType) {
 			case '1':
-				$html			=	'<i class="fa fa-'.$value.'"></i> ';
+				if($customIcon!=""){
+					$icon=$customIcon;
+				}else{
+					$icon='fa-'.$value;
+				}
+				$html			=	'<i class="fa '.$icon.'"></i> ';
 				break;
 			case '0':
 			default:
-				$html			=	'<span class="icon-'.$value.'"></span>';
+				if($customIcon!=""){
+					$icon=$customIcon;
+				}else{
+					$icon='icon-'.$value;
+				}
+				$html			=	'<span class="'.$icon.'"></span>';
 				break;
 		}
 		//ICON Type
