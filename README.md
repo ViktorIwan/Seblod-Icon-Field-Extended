@@ -7,4 +7,5 @@ This override is usefull when you want to build a front-end apps. The new modifi
    - Icon Only
    - Icon Before Text
    - Icon After Text
+   
 3. New Text Parameter also provided
