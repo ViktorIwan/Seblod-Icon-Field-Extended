@@ -11,12 +11,12 @@
 defined( '_JEXEC' ) or die;
 
 JCckDev::forceStorage();
-// $lang = JFactory::getLanguage();
-// $extension = 'plg_cck_field_icon';
-// $base_dir = JPATH_ADMINISTRATOR;
-// $language_tag = $lang->getTag();
-// $reload = true;
-// //$lang->load($extension, $base_dir, $language_tag, $reload);
+$lang = JFactory::getLanguage();
+$extension = 'plg_cck_field_icon';
+$base_dir = dirname(__FILE__)."/../";
+$language_tag = $lang->getTag();
+$reload = true;
+$lang->load($extension, $base_dir, $language_tag, $reload);
 $options2	=	JCckDev::fromJSON( $this->item->options2 );
 ?>
 
